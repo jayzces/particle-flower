@@ -1,0 +1,22 @@
+{
+  "name": "particle-flower",
+  "version": "1.0.0",
+  "description": "Flower made from moving circles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "pug index.pug && stylus styles.styl -c",
+    "dev-stylus": "stylus -w styles.styl -c",
+    "dev-pug": "pug -w index.pug"
+  },
+  "keywords": [
+    "flower",
+    "stylus-lang"
+  ],
+  "author": "Louise Hermosa",
+  "license": "ISC",
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6",
+    "stylus": "^0.54.5"
+  }
+}

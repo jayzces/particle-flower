@@ -1,0 +1,11 @@
+doctype html
+html
+    head
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="styles.css" type="text/css")
+        title Particle Flower
+    body
+        .container
+          - var n = 0;
+          while n < 50
+            .petal= n++

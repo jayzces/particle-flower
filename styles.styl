@@ -1,0 +1,56 @@
+pink = #ec407a;
+
+body
+    background-color: #EEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+
+.container
+    background-color: pink;
+    position: relative;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+
+
+.petal
+    background-color: pink;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 8px;
+    height: 8px;
+    font-size: 0;
+    border-radius: 50%;
+
+
+petals = 50;
+angle = 360 / petals;
+diameter = 36px;
+
+
+for i in (1..petals)
+    x = cos(angle * i * (PI / 180)) * diameter;
+    y = sin(angle * i * (PI / 180)) * diameter;
+
+    .petal:nth-child({i})
+        transform: translate(unit(x, 'px'), unit(y, 'px'));
+        animation: (grow- + i) 1s ease-in-out infinite;
+        animation-delay: (1s / 10 * i);
+
+    @keyframes grow-{i}
+        0%,
+        100%
+            background-color: pink;
+            transform: translate(unit(x, 'px'), unit(y, 'px'));
+        50%
+            background-color: hsl(i * angle, 100%, 60%);
+            transform: translate(unit(x * 6, 'px'), unit(y * 6, 'px'));
